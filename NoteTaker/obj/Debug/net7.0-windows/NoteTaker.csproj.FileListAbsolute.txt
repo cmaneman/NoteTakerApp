@@ -16,3 +16,4 @@ E:\Random Programs and Practice\NoteTaker\obj\Debug\net7.0-windows\NoteTaker.gen
 E:\Random Programs and Practice\NoteTaker\obj\Debug\net7.0-windows\ref\NoteTaker.dll
 E:\Random Programs and Practice\NoteTaker\obj\Debug\net7.0-windows\NoteTaker.Notes.resources
 E:\Random Programs and Practice\NoteTaker\obj\Debug\net7.0-windows\NoteTaker.Reminder.resources
+E:\Random Programs and Practice\NoteTaker\obj\Debug\net7.0-windows\NoteTaker.Properties.Resources.resources

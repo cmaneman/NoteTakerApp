@@ -1,10 +1,14 @@
 using System.Data;
+using System.Media;
 
 namespace NoteTaker
 {
     public partial class Notes : Form
     {
         DataTable table;
+        public readonly static string menuLocation = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Sounds\menuSelect.wav");
+        public static SoundPlayer player = new SoundPlayer(Notes.menuLocation);
+
 
         public Notes()
         {
@@ -13,12 +17,12 @@ namespace NoteTaker
 
         private void label1_Click(object sender, EventArgs e)
         {
-
+            //Useless...
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-
+            //Useless...
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -39,6 +43,8 @@ namespace NoteTaker
 
             dataGridView1.Columns["Messages"].Visible = false;
             dataGridView1.Columns["Title"].Width = 140;
+
+            Console.WriteLine("Hello");
         }
 
         private void btnNew_Click(object sender, EventArgs e)
@@ -74,8 +80,13 @@ namespace NoteTaker
             this.Close();
         }*/
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+
+        private void ToReminderForm_Click(object sender, EventArgs e)
         {
+            player.Play();
+            var r = new Reminder();
+            r.Show();
+            this.Hide();
 
         }
     }

@@ -37,6 +37,7 @@
             btnSave = new Button();
             btnRead = new Button();
             btnDelete = new Button();
+            ToRemindForm = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -78,19 +79,10 @@
             // 
             // dataGridView1
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.AllowUserToResizeColumns = false;
-            dataGridView1.AllowUserToResizeRows = false;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(534, 52);
+            dataGridView1.Location = new Point(557, 0);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.RowHeadersVisible = false;
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(240, 226);
-            dataGridView1.TabIndex = 4;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            dataGridView1.Size = new Size(240, 150);
+            dataGridView1.TabIndex = 10;
             // 
             // btnNew
             // 
@@ -131,11 +123,22 @@
             btnDelete.UseVisualStyleBackColor = true;
             btnDelete.Click += btnDelete_Click;
             // 
-            // Form1
+            // ToRemindForm
+            // 
+            ToRemindForm.Location = new Point(52, 43);
+            ToRemindForm.Name = "ToRemindForm";
+            ToRemindForm.Size = new Size(146, 23);
+            ToRemindForm.TabIndex = 9;
+            ToRemindForm.Text = "Go to Reminder Page";
+            ToRemindForm.UseVisualStyleBackColor = true;
+            ToRemindForm.Click += ToReminderForm_Click;
+            // 
+            // Notes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(798, 450);
+            Controls.Add(ToRemindForm);
             Controls.Add(btnDelete);
             Controls.Add(btnRead);
             Controls.Add(btnSave);
@@ -145,7 +148,7 @@
             Controls.Add(txtMessage);
             Controls.Add(label2);
             Controls.Add(label1);
-            Name = "Form1";
+            Name = "Notes";
             Text = "Form1";
             Load += NotesForm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
@@ -164,5 +167,6 @@
         private Button btnSave;
         private Button btnRead;
         private Button btnDelete;
+        private Button ToRemindForm;
     }
 }

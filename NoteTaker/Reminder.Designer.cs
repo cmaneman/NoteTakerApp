@@ -28,12 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            ToNotes = new Button();
+            SuspendLayout();
+            // 
+            // ToNotes
+            // 
+            ToNotes.Location = new Point(60, 47);
+            ToNotes.Name = "ToNotes";
+            ToNotes.Size = new Size(114, 23);
+            ToNotes.TabIndex = 1;
+            ToNotes.Text = "Go To Notes Page";
+            ToNotes.UseVisualStyleBackColor = true;
+            ToNotes.Click += ToNotesForm_Click;
+            // 
+            // Reminder
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(ToNotes);
+            Name = "Reminder";
             Text = "Form2";
+            ResumeLayout(false);
         }
 
         #endregion
+        private Button ToNotes;
     }
 }
